@@ -1,36 +1,34 @@
 
 $(document).ready(function () {
 
-  var timerTime = 120
+  var timerTime = 15
 
   var timeInterval;
 
   function startTime() {
 
-    timerTime = 120;
+    timerTime = 15;
 
     timeInterval = window.setInterval(function () {
-    timerTime--
-    document.getElementById('timer').innerHTML = timerTime
+      timerTime--
+      stopTime();
+      document.getElementById('timer').innerHTML = timerTime
     }, 1000);
 
   };
 
   function stopTime() {
 
-    if (timeInterval === 0){
-    clearTimeout(timeInterval)
-    alert("times up");
+    if (timerTime === 0) {
+      clearInterval(timeInterval);
+      alert("times up");
     }
 
   };
 
+  startTime();
+
   
 
-  startTime();
-  stopTime();
-
-
-
-
+  
 });
