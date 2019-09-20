@@ -22,13 +22,23 @@ $(document).ready(function () {
     if (timerTime === 0) {
       clearInterval(timeInterval);
       alert("times up");
+      endGame();
     }
 
   };
 
   startTime();
 
-  
+  // var correct = ;
+  // var incorrect = ;
+
+  // function endGame(){
+
+  //   if ("formquestion0" === "48" && "formquestion1" === "") {
+
+  //   }
+
+  // }
 
   
 });
